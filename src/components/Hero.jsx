@@ -169,8 +169,9 @@ const Hero = () => {
             <div className="rounded-full px-5 py-3 bg-red-600 font-semibold text-white text-center">
               Continue
             </div>
-            <div className="rounded-full px-5 py-3 font-semibold text-gray-600 text-center border-2">
-              Continue with Google
+            <div className="rounded-full flex justify-around px-5 py-3 font-semibold text-gray-600 text-center border-2">
+              <img src="image.svg" width={20} />
+              <p>Continue with Google</p>
             </div>
           </div>
         </div>

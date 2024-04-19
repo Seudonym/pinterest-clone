@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ minimal }) => {
   const [showOption, setShowOptions] = useState(false);
@@ -8,12 +9,18 @@ const Navbar = ({ minimal }) => {
     return (
       <div className="flex justify-between items-center font-medium font-sans p-5 fixed w-full top-0 z-50 bg-white">
         <div className="flex items-center gap-6">
-          <div className="flex items-center">
-            <img src="/logo_transparent.png" alt="Pinterest logo" width={45} />
-            <p className="text-xl tracking-tighter text-red-700 font-bold">
-              Pinterest
-            </p>
-          </div>
+          <Link to={"/"}>
+            <div className="flex items-center">
+              <img
+                src="/logo_transparent.png"
+                alt="Pinterest logo"
+                width={45}
+              />
+              <p className="text-xl tracking-tighter text-red-700 font-bold">
+                Pinterest
+              </p>
+            </div>
+          </Link>
 
           <div
             className="bg-gray-300 px-5 py-3 rounded-full relative"
@@ -21,9 +28,9 @@ const Navbar = ({ minimal }) => {
           >
             {option}
             {showOption && (
-              <div className="flex flex-col rounded-3xl bg-gray-300 p-6 absolute top-16 right-1">
+              <div className="flex flex-col rounded-3xl bg-white border-2 border-black  p-3 absolute top-16 right-1">
                 <div
-                  className="hover:bg-gray-400 p-2 rounded-2xl"
+                  className="hover:bg-gray-200 p-2 rounded-xl"
                   onClick={() => {
                     setOption("Today");
                     setShowOptions(false);
@@ -32,7 +39,7 @@ const Navbar = ({ minimal }) => {
                   Today
                 </div>
                 <div
-                  className="hover:bg-gray-400 p-2 rounded-2xl"
+                  className="hover:bg-gray-200 p-2 rounded-xl"
                   onClick={() => {
                     setOption("Explore");
                     setShowOptions(false);
@@ -41,7 +48,7 @@ const Navbar = ({ minimal }) => {
                   Explore
                 </div>
                 <div
-                  className="hover:bg-gray-400 p-2 rounded-2xl"
+                  className="hover:bg-gray-200 p-2 rounded-xl"
                   onClick={() => {
                     setOption("Watch");
                     setShowOptions(false);
@@ -54,7 +61,10 @@ const Navbar = ({ minimal }) => {
           </div>
         </div>
 
-        <input className="bg-gray-300 rounded-3xl p-3 px-5 text-gray-400 flex-grow mx-6" placeholder="Search..."/>
+        <input
+          className="bg-gray-300 rounded-3xl p-3 px-5 text-gray-400 flex-grow mx-6"
+          placeholder="Search..."
+        />
 
         <div className="flex gap-8">
           <div className="flex items-center gap-6">
@@ -84,22 +94,30 @@ const Navbar = ({ minimal }) => {
   return (
     <div className="flex justify-between font-medium font-sans p-5 fixed w-full top-0 z-50 bg-white">
       <div className="flex items-center gap-6">
-        <div className="flex items-center">
-          <img src="/logo_transparent.png" alt="Pinterest logo" width={45} />
-          <p className="text-xl tracking-tighter text-red-700 font-bold">
-            Pinterest
-          </p>
-        </div>
+        <Link to={"/"}>
+          <div className="flex items-center">
+            <img src="/logo_transparent.png" alt="Pinterest logo" width={45} />
+            <p className="text-xl tracking-tighter text-red-700 font-bold">
+              Pinterest
+            </p>
+          </div>
+        </Link>
 
-        <div className="hover:bg-gray-300 hover:rounded-lg p-2 text-lg">
-          Today
-        </div>
-        <div className="hover:bg-gray-300 hover:rounded-lg p-2 text-lg">
-          Watch
-        </div>
-        <div className="hover:bg-gray-300 hover:rounded-lg p-2 text-lg">
-          Explore
-        </div>
+        <Link to="explore">
+          <div className="hover:bg-gray-300 hover:rounded-lg p-2 text-lg">
+            Today
+          </div>
+        </Link>
+        <Link to="explore">
+          <div className="hover:bg-gray-300 hover:rounded-lg p-2 text-lg">
+            Explore
+          </div>
+        </Link>
+        <Link to="explore">
+          <div className="hover:bg-gray-300 hover:rounded-lg p-2 text-lg">
+            Watch
+          </div>
+        </Link>
       </div>
 
       <div className="flex gap-8">
