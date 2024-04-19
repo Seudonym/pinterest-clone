@@ -110,14 +110,16 @@ const Hero = () => {
       </div>
 
       {/* Final page bg */}
-      <div className=" h-full grid grid-cols-7 grid-rows-2 justify-items-center place-items-center w-full absolute overflow-hidden">
-        <ImageStack imgs={["015.jpg", "016.jpg", "017.jpg"]} offset={250} />
-        <ImageStack imgs={["018.jpg", "019.jpg", "020.jpg"]} offset={120} />
-        <ImageStack imgs={["021.jpg", "022.jpg", "023.jpg"]} offset={250} />
-        <ImageStack imgs={["024.jpg", "025.jpg", "045.jpg"]} offset={120} />
-        <ImageStack imgs={["027.jpg", "028.jpg", "029.jpg"]} offset={250} />
-        <ImageStack imgs={["030.jpg", "031.jpg", "032.jpg"]} offset={120} />
-        <ImageStack imgs={["033.jpg", "034.jpg", "035.jpg"]} offset={250} />
+      <div className="flex justify-center w-full">
+        <div className=" h-full gap-3 grid grid-cols-7 grid-rows-2 justify-items-center place-items-center absolute overflow-hidden">
+          <ImageStack imgs={["015.jpg", "016.jpg", "017.jpg"]} offset={250} />
+          <ImageStack imgs={["018.jpg", "019.jpg", "020.jpg"]} offset={120} />
+          <ImageStack imgs={["021.jpg", "022.jpg", "023.jpg"]} offset={250} />
+          <ImageStack imgs={["024.jpg", "025.jpg", "045.jpg"]} offset={120} />
+          <ImageStack imgs={["027.jpg", "028.jpg", "029.jpg"]} offset={250} />
+          <ImageStack imgs={["030.jpg", "031.jpg", "032.jpg"]} offset={120} />
+          <ImageStack imgs={["033.jpg", "034.jpg", "035.jpg"]} offset={250} />
+        </div>
       </div>
       {/* Final page */}
       <div className=" h-dvh grid grid-cols-2 grid-rows-1 justify-items-center place-items-center bg-[#000000aa] relative">
